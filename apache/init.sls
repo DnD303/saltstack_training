@@ -1,17 +1,17 @@
 install_apache:
   pkg.installed:
     - pkgs:
-      - httpd
+	  - httpd
 	  
-configuration_apache:
+index_html:
   file.managed:
-    - name: /var/www/html/indel.html/indel
+    - name: /var/www/html/index_html
 	- user: apache
 	- group: apache
 	- mode: 644
-	- source: salt://apache/templates/index.html/indel
+	- source: salt://apache/templates/index_html
 	
-run_httpd:
+apache_service:
   service.running:
-	- enable: true
     - name: httpd
+	- enable: True
