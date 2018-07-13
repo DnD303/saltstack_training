@@ -5,7 +5,6 @@ user_mo_ali:
   - uid: 10000
   - home: /home/mo.ali
   - shell: /bin/bash
-  - gid_from_name: True
 
 sshkey_mo_ali:
  ssh_auth.present:
